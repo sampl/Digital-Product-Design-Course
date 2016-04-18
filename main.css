@@ -1,0 +1,27 @@
+/* global */
+* {
+	color: hsl(210, 90%, 50%);
+	font-weight: 300;
+	font-family: 'karla', sans-serif;
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 800px;
+	margin: 12rem auto;
+	padding: 1rem;
+}
+
+h1 {
+	margin: 0 0 2rem;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
