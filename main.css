@@ -1,10 +1,9 @@
 /* global */
-* {
-	color: hsl(210, 90%, 50%);
-	font-weight: 300;
-	font-family: 'karla', sans-serif;
-	box-sizing: border-box;
+* { 
+	box-sizing: border-box; 
+	font-family: 'Lato', sans-serif;
 }
+
 html,
 body {
 	margin: 0;
@@ -12,17 +11,151 @@ body {
 }
 
 body {
-	max-width: 800px;
-	margin: 10rem auto;
-	padding: 1rem;
-	line-height: 1.4;
+	float: left;
+	width: 100%;
+}
+
+ul {
+	padding-left: 24px;
+}
+
+li {
+	font-size: 18px;
+	line-height: 36px;
+}
+
+ul.list-style--none {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.list-style--none li {
+	list-style: none;
+	margin: 0 12px;
+	padding: 0;
+	display: inline-block;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-	margin: 0 0 2rem;
-	text-align: center;
+	font-size: 48px;
+	margin: 0 0 18px 0; 
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 24px;
 }
 
 p {
+	font-size: 18px;
+	line-height: 30px;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+header {
+	float: left;
+	width: 100%;
+	height: 800px;
+	// background-color: rgb(59, 66, 189);
+	// background-color: rgb(78, 135, 234);
+
+	background: #3b42bd; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #3b42bd 0%, #4e87ea 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #3b42bd 0%,#4e87ea 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #3b42bd 0%,#4e87ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+header .content {
+	margin-top: 300px;
+}
+
+nav {
+	line-height: 56px;
+}
+
+section.main {
+	float: left;
+	width: 100%;
+	padding: 36px 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 18px;
+}
+
+.text-center {
 	text-align: center;
 }
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-white {
+	color: white;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.fwb {
+	font-weight: bold;
+}
+
+
+
+button {
+	padding: 12px 24px;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+}
+
+button:hover {
+	opacity: .9;
+}
+
+button.large {
+	padding: 18px 36px;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+button.white {
+	background-color: white;
+}
+
+
+
+
+
