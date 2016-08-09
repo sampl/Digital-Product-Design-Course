@@ -204,7 +204,6 @@ button.slack {
 	background-color: #3023AE;
 	padding: 19px 16px;
 	margin-left: 20px;
-	max-width:100%;
 }
 
 button.slack img {
@@ -213,8 +212,7 @@ button.slack img {
 
 button.email {
 	background-color: #3023AE;
-	padding: 20px 50px;
-	max-width:100%;
+	padding: 20px 54px;
 }
 
 button.email img {
@@ -243,10 +241,5 @@ button.email img {
 @media screen (max-width: 480px ) {
     header .content {
         margin-top: 60px;
-    }
-
-    button {
-    	display: inline-block;
-    	margin-bottom: 400px;
     }
 }
