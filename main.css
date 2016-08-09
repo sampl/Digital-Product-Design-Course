@@ -1,7 +1,7 @@
 /* global */
 * { 
 	box-sizing: border-box; 
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Karla', sans-serif;
 }
 
 html,
@@ -20,7 +20,7 @@ ul {
 }
 
 li {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 26px;
 }
 
@@ -40,21 +40,22 @@ ul.list-style--none li {
 h1, h2, h3 {
 	font-weight: 700;
 	color: #3023AE;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Karla', sans-serif;
 }
 
 h1 {
-	font-size: 48px;
-	margin: 0 0 18px 0; 
+	font-size: 60px;
+	margin: 30 0 10px 0; 
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 32px;
 	line-height: 30px;
+	margin-top: 100px;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 30px;
 	margin-top: 60px;
 	margin-bottom: 24px;
@@ -64,11 +65,29 @@ h4 {
 	font-size: 20px;
 	line-height: 24px;
 	margin: 0;
+	font-weight:400;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight:400;
 }
 
 p {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 24px;
+}
+
+a {
+	text-decoration: none;
+	color: #3023AE;
+	font-weight: 700;
+}
+
+a:hover {
+	color: #415FD4;
+	text-decoration: underline;
+	transition: all 0.3s ease 0s;
 }
 
 a, button {
@@ -79,12 +98,12 @@ header {
 	float: left;
 	width: 100%;
 	height: 800px;
-	// background-color: rgb(59, 66, 189);
-	// background-color: rgb(78, 135, 234);
+	background-color: rgb(59, 66, 189);
+	background-color: rgb(78, 135, 234);
 
 	background-image:  url("imgs/header-blueprint.png");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 
 	/*background: #3b42bd; /* Old browsers */	
 	/* background: -moz-linear-gradient(-45deg,  #3b42bd 0%, #4e87ea 100%); /* FF3.6-15 */
@@ -93,7 +112,8 @@ header {
 }
 
 header .content {
-	margin-top: 300px;
+	margin-top: 160px;
+	margin-left: 20px;
 }
 
 nav {
@@ -107,9 +127,14 @@ section.main {
 }
 
 .container {
-	max-width: 960px;
+	max-width: 720px;
 	margin: 0 auto;
 	padding: 0 18px;
+}
+
+.u-of-m img{
+	max-width: 50%;
+	margin-top:20px;
 }
 
 .text-center {
@@ -126,6 +151,12 @@ section.main {
 
 .text-white {
 	color: white;
+}
+
+.text-white h3{
+	margin-top:30px;
+	margin-bottom:60px;
+	font-weight:400;
 }
 
 .float-left {
@@ -166,8 +197,29 @@ button.large {
 button.white {
 	background-color: white;
 	color: #3023AE;
+	transition: all 0.4s ease 0s;
 }
 
+button.slack {
+	background-color: #3023AE;
+	padding: 19px 16px;
+	margin-left: 20px;
+	max-width:100%;
+}
+
+button.slack img {
+	max-width:50%;
+}
+
+button.email {
+	background-color: #3023AE;
+	padding: 20px 50px;
+	max-width:100%;
+}
+
+button.email img {
+	max-width:50%;
+}
 
 .mar-b-6 { margin-bottom: 6px; }
 .mar-b-12{ margin-bottom: 12px; }
@@ -182,4 +234,19 @@ button.white {
 }
 
 
+::selection {
+  background: #3023AE;
+  color: white;
+}
 
+
+@media screen (max-width: 480px ) {
+    header .content {
+        margin-top: 60px;
+    }
+
+    button {
+    	display: inline-block;
+    	margin-bottom: 400px;
+    }
+}
