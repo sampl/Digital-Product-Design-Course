@@ -170,7 +170,9 @@ nav {
 
 .nav-mobile {
 	margin: 0;
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
 	list-style: none;
 	top: 80px;
 	background-color: white;
@@ -270,6 +272,7 @@ section.main {
 
 .lecture-block {
 	display: block;
+	margin-bottom: 60px;
 	width: 100%;
 	float: left;
 }

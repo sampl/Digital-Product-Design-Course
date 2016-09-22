@@ -23,19 +23,14 @@
 	<meta name="twitter:image" content="imgs/share.png" />
 	<meta name="twitter:url" content="http://umichdesign.com/" />
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
-	<header class="text-center text-white">
+	<header class="text-center hide-mobile text-white">
 		<div class="container">
 			<div class="inline-block">
 				<div class="u-of-m"><img src="imgs/u-of-m.png"></div>
-			</div>
-			<div class="float-right inline-block">
-				<!-- <ul class="list-style--none">
-					<li class="fwb"><a>Home</a></li>
-					<li class="fwb"><a>About</a></li>
-				</ul> -->
 			</div>
 		</div>
 
@@ -51,15 +46,26 @@
 			<div class="float-left">
 				<img src="imgs/UMPDlogo.png" height="30" style="margin-top: 20px;">
 			</div>
+
 			<div class="float-right">
-				<ul class="nav-list">
-					<li><a href="/">Lectures</a></li>
-					<li class="active"><a href="/about.html">About</a></li>
-					<li><a href="/resources.html">Resources</a></li>
+				<img style="padding-top: 24px; margin-right: 6px;" data-action="show-mobile-nav" class="show-mobile" width="30px" src="imgs/hamburger.png">
+				<img style="padding-top: 24px; margin-right: 6px; display: none" data-action="close-mobile-nav" width="21px" src="imgs/close-menu.png">
+
+				<ul class="nav-list hide-mobile">
+					<li class="active"><a href="/">Lectures</a></li>
+					<li><a href="/about.html">About</a></li>
+					<!-- <li><a href="/resources.html">Resources</a></li> -->
 					<li><a href="/contact.html">Contact</a></li>
 				</ul>
 			</div>
 		</div>
+
+		<ul class="nav-mobile" style="display: none;">
+			<li><a href="/">Lectures</a></li>
+			<li><a href="/about.html">About</a></li>
+			<!-- <li><a href="/resources.html">Resources</a></li> -->
+			<li><a href="/contact.html">Contact</a></li>
+		</ul>
 	</nav>
 
 	<section class="main">
@@ -148,16 +154,25 @@
 					<img class="profile" src="imgs/emmad.jpg">
 				</div>
 			</div>
-			<div class="mar-b-36">
-				<h2>Contact</h2>
-				<p>For more information, you can email us and keep up with relevant discussions/announcements for the course.</p>
-				<a href="mailto:umichdesign@umich.edu" target="_blank">
-					<button class="email"><img src="imgs/email.png"></button>
-				<!--<a href="https://umichdesign.herokuapp.com/" target="_blank">
-					<button class="slack"><img src="imgs/slack-logo.png"></button>-->
-			</div>
 		</div>
 	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(document).on('click', '[data-action="show-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="close-mobile-nav"]').show();
+				$('.nav-mobile').slideDown('fast');
+			});
+
+			$(document).on('click', '[data-action="close-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="show-mobile-nav"]').show();
+				$('.nav-mobile').slideUp('fast');
+			});
+			
+		});
+	</script>
 </body>
 
 </html>
