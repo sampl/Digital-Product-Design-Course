@@ -23,129 +23,108 @@
 	<meta name="twitter:image" content="imgs/share.png" />
 	<meta name="twitter:url" content="http://umichdesign.com/" />
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
-	<header class="text-center text-white">
-		<nav class="container">
+	<header class="text-center hide-mobile text-white">
+		<div class="container">
 			<div class="inline-block">
 				<div class="u-of-m"><img src="imgs/u-of-m.png"></div>
 			</div>
-			<div class="float-right inline-block">
-				<!-- <ul class="list-style--none">
-					<li class="fwb"><a>Home</a></li>
-					<li class="fwb"><a>About</a></li>
-				</ul> -->
-			</div>
-		</nav>
+		</div>
 
 		<div class="content">
 			<h5>ENTR 390.012  &#8226;  FALL 2016</h5>
 			<h1 class="text-white">Digital Product Design</h1>
 			<h3 class="text-white">Mondays, 4-5pm <br /> 170 Weiser Hall</h3>
-
-			<a class="text-white"href="https://wolverineaccess.umich.edu" target="_blank">
-				<button class="fwb large white">REGISTER NOW</button>
-			</a>
 		</div>
 	</header>
 
+	<nav class="nav">
+		<div class="container">
+			<div class="float-left">
+				<img src="imgs/UMPDlogo.png" height="30" style="margin-top: 20px;">
+			</div>
+
+			<div class="float-right">
+				<img style="padding-top: 24px; margin-right: 6px;" data-action="show-mobile-nav" class="show-mobile" width="30px" src="imgs/hamburger.png">
+				<img style="padding-top: 24px; margin-right: 6px; display: none" data-action="close-mobile-nav" width="21px" src="imgs/close-menu.png">
+
+				<ul class="nav-list hide-mobile">
+					<li class="active"><a href="/">Lectures</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="/resources.html">Resources</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<ul class="nav-mobile" style="display: none;">
+			<li><a href="/">Lectures</a></li>
+			<li><a href="/about.html">About</a></li>
+			<li><a href="/resources.html">Resources</a></li>
+			<li><a href="/contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
 	<section class="main">
 		<div class="container">
-			<div class="mar-b-36">
-				<h2>Course Description</h2>
-				<p>This interdisciplinary course is an introduction to the fundamentals of designing products for digital platforms, taught by actual designers at a startup.</p>
+			<h2>Lectures</h2>
 
-				<h3>You'll learn how to</h3>
-				<ul>
-					<li><span style="padding-left: 20px; display: block;">
-						Use design thinking to discover problems worth solving, generate and prototype solutions, and test them with real users
-					</span></li>
-					<li><span style="padding-left: 20px; display: block;">
-						Design your own products by creating wireframes, interactions, and visual designs
-					</span></li>
-					<li><span style="padding-left: 20px; display: block;">
-						Use typography, color, shape, space--and industry-standard tools like Sketch, Invision, etc--to build designs that are attractive, simple, and work well
-					</span></li>
-					<li><span style="padding-left: 20px; display: block;">
-						Solicit constructive feedback, critique design work and substantiate your criticism
-					</span></li>
-					<li><span style="padding-left: 20px; display: block;">
-						Discuss topics in the design world, including usability, user experience design, user interface design, and design research
-					</span></li>
-				</ul>
-
-				<p>This course was created by UM students and will be taught by practicing designers working at FarmLogs.</p>
-
-				<p>Take this course if you want to learn how to make awesome stuff &#128293; &#128175;</p>
-
-				<h3>Intended Audience</h3>
-				<p>This is an introductory course for students studying engineering, art and design, and liberal arts--or anyone interested in making effective digital products.</p>
-
-				<h3>Format</h3>
-				<p>Weekly lectures with optional work sessions where students can hang out and work with instructors, classmates, and others in the Ann Arbor design community. Weekly small design assignments with a final product project at the end of the semester.</p>
-
-			</div>
-
-			<h2>About Us</h2>
-
-			<div class="mar-b-30 bio_bundle">
-				<div class="bio">
-					<h4>Sam Pierce Lolla</h4>
-					<div class="float-left inline-block width-1of2_laptop width-full_phone">
-						<p>As the first employee and Director of Product Design at FarmLogs, Sam has been building the product--and design team--that helps run and optimize many of America&#39;s farms. Whether he&#39;s at FarmLogs or working on one of his <a href="http://sampl.us/" target="_blank">other projects,</a> he&#39;s obsessed with designing simple, powerful tools that help people think and learn.</p>
-					</div>
+			<!-- <div class="lecture-block">
+				<div class="left-half">
+					<iframe src="" frameborder="0" allowfullscreen></iframe>
+					<a style="line-height: 36px;" href="">Download Slides</a>
 				</div>
-				<div class="bio_image">
-					<img class="profile" src="imgs/sam.jpg">
+				<div class="right-half">
+					<span class="small-meta-blue">LECTURE 2, SEPTEMBER 19, 2016</span>
+					<h4>Intro - Design with a Capital D</h4>
+					<p>Addressing initial course feedback and concerns. Also, answering the question of 'what makes a design good?'.</p>
+					<p><strong>Assignment</strong><br />
+						
 				</div>
 			</div>
-	
-			<div class="mar-b-30 bio_bundle">
-				<div class="bio">
-					<h4>Kelsey Trabue</h4>
-					<div class="float-left inline-block width-1of2_laptop width-full_phone">
-						<p><a href="http://klsy.co" target="_blank">Kelsey</a> is a Michigan native, living in Ann Arbor. She is currently a designer at FarmLogs and has a deep passion for working with tech startups and entrepreneurs. She has a Bachelor&#39;s degree in Communications and Spanish from Wingate University and a Master&#39;s in Interactive Media from Elon University. Kelsey loves making complex information digestible and easier to understand.</p>
-					</div>
+ -->
+			<div class="lecture-block">
+				<div class="left-half">
+					<iframe style="display: block" src="https://www.youtube.com/embed/4a_PBiyPbUA" frameborder="0" allowfullscreen></iframe>
+					<a style="display: block; padding-bottom: 24px; line-height: 36px;" href="">Download Slides</a>
 				</div>
-				<div class="bio_image">
-					<img class="profile" src="imgs/kelsey.jpg" class=>
-				</div>
-			</div>
 
-			<div class="mar-b-30 bio_bundle">
-				<div class="bio">
-					<h4>Carson Covell</h4>
-					<div class="float-left inline-block width-1of2_laptop width-full_phone">
-						<p><a href="http://carsoncovell.com/" target="_blank">Carson</a> studies Computer Science and Entrepreneurship at the University of Michigan. He spent the last summer in Atlanta, GA, working a user experience developer for MailChimp. Previously he interned as a front-end developer at FarmLogs and got to know the wonderful Kelsey Trabue and Sam Pierce Lolla. Carson is interested in combining design and development to build exceptional digital product experiences.</p>
-					</div>
+				<div class="right-half">
+					<span class="small-meta-blue">LECTURE 1, SEPTEMBER 12, 2016</span>
+					<h4>Intro - Welcome</h4>
+					<p>Meet your instructors and classmates, learn about the goals for the course, and see a quick exercise about beautiful, simple and functional design.</p>
+					<p><strong>Exercise</strong><br />
+						 Think of 3 different objects in your real life:</p>
+						<ul>
+							<li>One delightful only</li>
+							<li>One useful only</li>
+							<li>One that's both</li>
+							<li>* No apple products</li>
+						</ul>
 				</div>
-				<div class="bio_image">
-					<img class="profile" src="imgs/carson.jpg">
-				</div>
-			</div>
-
-			<div class="mar-b-30 bio_bundle">
-				<div class="bio">
-					<h4>Emmad Mazhari</h4>
-					<div class="float-left inline-block width-1of2_laptop width-full_phone">
-						<p><a href="http://mazhari.me/" target="_blank">Emmad</a> is a student at UMich studying Econ & CS. He spent his past summer designing at Quora and the summer before that designing for a cybersecurity company called Forcepoint (formerly Websense | Raytheon). He&#39;s really interested in mechanics design and how frameworks we create can influence people and their decision making, particularly in physical spaces. He also like game theory & rap.</p>
-					</div>
-				</div>
-				<div class="bio_image">
-					<img class="profile" src="imgs/emmad.jpg">
-				</div>
-			</div>
-			<div class="mar-b-36">
-				<h2>Contact</h2>
-				<p>For more information, you can email us and keep up with relevant discussions/announcements for the course.</p>
-				<a href="mailto:umichdesign@umich.edu" target="_blank">
-					<button class="email"><img src="imgs/email.png"></button>
-				<!--<a href="https://umichdesign.herokuapp.com/" target="_blank">
-					<button class="slack"><img src="imgs/slack-logo.png"></button>-->
 			</div>
 		</div>
 	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(document).on('click', '[data-action="show-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="close-mobile-nav"]').show();
+				$('.nav-mobile').show();
+			});
+
+			$(document).on('click', '[data-action="close-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="show-mobile-nav"]').show();
+				$('.nav-mobile').hide();
+			});
+			
+		});
+	</script>
 </body>
 
 </html>
