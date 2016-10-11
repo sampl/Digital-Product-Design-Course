@@ -89,7 +89,7 @@
 			<div id="lectures" v-cloak>
 				<!-- Vue loop -->
 				<div v-for="lecture in lectures" class="block">
-					<div class="upper">
+					<div class="upper" v-on:click="showLecture(lecture.number)">
 						<p class="number">LECTURE {{ lecture.number }}</p>
 						<h3 class="title" v-on:click="showLecture(lecture.number)">{{ lecture.title }}</h3>
 						<p class="date">{{ lecture.date }}</p>
