@@ -96,8 +96,8 @@
 						<p class="description">{{ lecture.description }}</p>
 					</div>
 					<div class="lower">
-						<a class="watch" href="{{lecture.youtube}}" target="blank">Watch Lecture</a>
-						<a class="slides" href="lectures/{{lecture.slides}}" target="_blank">Download Slides</a>
+						<a class="watch" href={{lecture.youtube}} target="blank">Watch Lecture</a>
+						<a class="slides" href={{lecture.slides}} target="_blank">Download Slides</a>
 					</div>
 				</div>
 				<!-- end loop -->
@@ -132,8 +132,8 @@
 							<p class="description">{{lecture.description}}</p>
 
 							<div class="inline-block">
-								<button class="light-blue" style="margin-right: 24px;">Watch Lecture</button>
-								<button class="white">Download Slides</button>
+								<button class="light-blue"  href={{lecture.youtube}} style="margin-right: 24px;">Watch Lecture</button>
+								<button class="white" href={{lecture.slides}} >Download Slides</button>
 							</div>
 
 							<div v-if="lecture.assignment">

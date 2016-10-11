@@ -17,7 +17,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "October 3, 2016",
-		slides: "lecture4.pdf"
+		slides: "/lectures/lecture4.pdf"
 	},
 	{
 		title: "User Research",
@@ -36,7 +36,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "September 26, 2016",
-		slides: "lecture3.pdf"
+		slides: "/lectures/lecture3.pdf"
 	},
 	{
 		title: "Design with a Capital D",
@@ -54,7 +54,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "September 19, 2016",
-		slides: "lecture2.pdf"
+		slides: "/lectures/lecture2.pdf"
 	},
 	{
 		title: "Intro - Welcome",
@@ -64,7 +64,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "September 12, 2016",
-		slides: "lecture1.pdf"
+		slides: "/lectures/lecture1.pdf"
 	}
 ]
 
