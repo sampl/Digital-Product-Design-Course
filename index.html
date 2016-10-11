@@ -22,8 +22,13 @@
 	<meta name="twitter:title" content="Digital Product Design" />
 	<meta name="twitter:image" content="imgs/share.png" />
 	<meta name="twitter:url" content="http://umichdesign.com/" />
+	
+	<!-- emoji support -->
+	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
 </head>
 
 <body>
@@ -80,103 +85,78 @@
 			</div>
 
 			<h2>Lectures</h2>
-
-			<div class="lecture-block">
-				<div class="left-half">
-					<iframe style="display: block;" src="https://www.youtube.com/embed/pl21kehYvvs" frameborder="0" allowfullscreen></iframe>
-					<a href="lectures/Lecture4.pdf" target="_blank" style="padding-bottom: 24px; display: block; line-height: 36px;">
-						<img src="imgs/download-icon.png" height="12px">
-						Download Slides
-					</a>
+			
+			<div id="lectures" v-cloak>
+				<!-- Vue loop -->
+				<div v-for="lecture in lectures" class="block">
+					<div class="upper">
+						<p class="number">LECTURE {{ lecture.number }}</p>
+						<h3 class="title" v-on:click="showLecture(lecture.number)">{{ lecture.title }}</h3>
+						<p class="date">{{ lecture.date }}</p>
+						<p class="description">{{ lecture.description }}</p>
+					</div>
+					<div class="lower">
+						<a class="watch" href="{{lecture.youtube}}" target="blank">Watch Lecture</a>
+						<a class="slides" href="lectures/{{lecture.slides}}" target="_blank">Download Slides</a>
+					</div>
 				</div>
-				<div class="right-half">
-					<span class="small-meta-blue">LECTURE 4, OCTOBER 3, 2016</span>
-					<h4>Structure 1 - Information Architecture</h4>
-					<p>Creating and organizing the structure of an application to suit a certain behavior.</p>
-					<p><strong>Assignment</strong><br />
-					Diagram your app:</p>
-					<ul>
-						<li>Use your own app idea or model a basic todo list</li>
-						<li>Show pages as rectangles</li>
-						<li>Show the interactions between pages as arrows</li>
-						<li>Indicate the starting point and the "a ha!" (success) moment</li>
-					</ul>
-				</div>
+				<!-- end loop -->
 			</div>
-
-			<div class="lecture-block">
-				<div class="left-half">
-					<iframe style="display: block;" src="https://www.youtube.com/embed/OPudbBox5H4" frameborder="0" allowfullscreen></iframe>
-					<a href="lectures/Lecture3.pdf" target="_blank" style="padding-bottom: 24px; display: block; line-height: 36px;">
-						<img src="imgs/download-icon.png" height="12px">
-						Download Slides
-					</a>
-				</div>
-				<div class="right-half">
-					<span class="small-meta-blue">LECTURE 3, SEPTEMBER 26, 2016</span>
-					<h4>Research 1</h4>
-					<p>Talking to people to learn more about problems they are facing and why.</p>
-					<p><strong>Assignment</strong><br />
-					Write a one sentence brief:</p>
-					<ul>
-						<li>Talk to other people</li>
-						<li>Find a problem that can be solved with design</li>
-						<li><strong>It can't be a problem that you have</strong></li>
-						<li>Write a one sentence design brief</li>
-						<li>Use format from slides</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="lecture-block">
-				<div class="left-half">
-					<iframe style="display: block;" src="https://www.youtube.com/embed/ZhQhOdVIwlk" frameborder="0" allowfullscreen></iframe>
-					<a href="lectures/Lecture2.pdf" target="_blank" style="padding-bottom: 24px; display: block; line-height: 36px;">
-						<img src="imgs/download-icon.png" height="12px">
-						Download Slides
-					</a>
-				</div>
-				<div class="right-half">
-					<span class="small-meta-blue">LECTURE 2, SEPTEMBER 19, 2016</span>
-					<h4>Intro - Design with a Capital D</h4>
-					<p>Addressing initial course feedback and concerns. Also, we examine the question of 'what makes a design good?'.</p>
-					<p><strong>Assignment</strong><br />
-					Choose any object and write a one paragraph critique of it. Some questions to consider while doing this:</p>
-					<ul>
-						<li>Who do you think it was designed for?</li>
-						<li>What's good?</li>
-						<li>What could be improved?</li>
-						<li>Include WHY (use principles from Lecture #1)</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="lecture-block">
-				<div class="left-half">
-					<iframe style="display: block" src="https://www.youtube.com/embed/5aHPW6jA00c" frameborder="0" allowfullscreen></iframe>
-					<a href="lectures/Lecture1.pdf" target="_blank" style="padding-bottom: 24px; display: block; line-height: 36px;" href="">
-						<img src="imgs/download-icon.png" height="12px">
-						Download Slides
-					</a>
-				</div>
-
-				<div class="right-half">
-					<span class="small-meta-blue">LECTURE 1, SEPTEMBER 12, 2016</span>
-					<h4>Intro - Welcome</h4>
-					<p>Meet your instructors and classmates, learn about the goals for the course, and see a quick exercise about beautiful, simple and functional design.</p>
-					<p><strong>Exercise</strong><br />
-						 Think of 3 different objects in your real life:</p>
-						<ul>
-							<li>One delightful only</li>
-							<li>One useful only</li>
-							<li>One that's both</li>
-							<li>* No apple products</li>
-						</ul>
-				</div>
-			</div>
-		</div>
+			
 	</section>
 
+	<footer style="margin-top: 40px">
+		<p class="text-center"><strong>Made with <img class="emoji" draggable="false" alt="❤️" src="http://twemoji.maxcdn.com/16x16/2764.png"> in Ann Arbor, MI</strong></p>
+	</footer>
+
+	<div id="overlay" v-cloak>
+		<transition name="slide">
+			<div class="overlay" v-if="show">
+				<div class="nav">
+					<div class="container narrow">
+						<div class="float-left">
+							<img src="imgs/UMPDlogo.png" height="30" style="margin-top: 20px;">
+						</div>
+						<div class="float-right" style="cursor: pointer" v-on:click="close">
+							<p class="close inline-block" style="margin-right: 8px">Close</p>
+							<img src="imgs/x.svg" style="position: relative; top: 1px;" height="12px">
+						</div>
+					</div>
+				</div>
+
+				<transition name="fade">
+					<section class="main" v-if="show">
+						<div class="container narrow">
+							<h1 class="title">{{ lecture.title }}</h1>
+							<p class="sub-title">Lecture {{lecture.number}}<span class="grey"> - {{lecture.date}}</span></p>
+							<p class="description">{{lecture.description}}</p>
+
+							<div class="inline-block">
+								<button class="light-blue" style="margin-right: 24px;">Watch Lecture</button>
+								<button class="white">Download Slides</button>
+							</div>
+
+							<div v-if="lecture.assignment">
+								<h2>Assignment</h2>
+								<p>{{ lecture.assignment.description }}</p>
+								<ul>
+									<li v-for="bullet in lecture.assignment.bullets">{{bullet}}</li>
+								</ul>
+							</div>
+
+							<div v-if="lecture.resources.length">
+								<h2>Resources</h2>
+								<ul>
+									<li v-for="source in lecture.resources"><a href="{{source.link}}">{{source.title}}</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</transition>
+			</div>
+		</transition>
+	</div>
+	<script type="text/javascript" src="lectures.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(document).on('click', '[data-action="show-mobile-nav"]', function (e) {
