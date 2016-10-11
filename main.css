@@ -117,6 +117,7 @@ ul.list-style--none li {
   }
 }
 .overlay {
+  overflow: scroll;
   position: fixed;
   top: 0;
   left: 0;
