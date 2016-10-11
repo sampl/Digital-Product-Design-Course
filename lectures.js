@@ -54,7 +54,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "September 19, 2016",
-		slides: "/lectures/lecture2.pdf"
+		slides: "/lectures/Lecture2.pdf"
 	},
 	{
 		title: "Intro - Welcome",
@@ -64,7 +64,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/pl21kehYvvs",
 		date: "September 12, 2016",
-		slides: "/lectures/lecture1.pdf"
+		slides: "/lectures/Lecture1.pdf"
 	}
 ]
 
