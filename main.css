@@ -50,6 +50,7 @@ ul.list-style--none li {
   box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.1);
 }
 #lectures .upper {
+  cursor: pointer;
   width: 100%;
   padding: 16px;
   margin-bottom: auto;
@@ -110,7 +111,13 @@ ul.list-style--none li {
   line-height: calc(1.14285714);
   color: #7a7a7a;
 }
+@media (max-width: 480px) {
+  #lectures {
+    justify-content: center;
+  }
+}
 .overlay {
+  overflow: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -248,6 +255,7 @@ nav {
   line-height: 56px;
 }
 .nav {
+  padding: 0px 20px;
   height: 70px;
   border-bottom: 1px solid #E3E5E8;
   float: left;
@@ -300,7 +308,7 @@ nav {
 section.main {
   float: left;
   width: 100%;
-  padding: 36px 10px;
+  padding: 36px 20px;
 }
 .container {
   max-width: 948px;
@@ -377,7 +385,8 @@ img.emoji {
   display: none;
 }
 button {
-  padding: 12px 24px;
+  margin-bottom: 10px;
+  padding: 12px 20px;
   border-radius: 6px;
   border: none;
   outline: none;
