@@ -1,6 +1,24 @@
 
 
 var lectureData = [
+{
+		title: "Wireframing and Sketching",
+		number: 5,
+		description: "Review the basics of wireframing and sketching for quickly modeling and prototyping app layouts and flows.",
+		assignment: {
+			discription: "Start designing a phone app to help students find places to study on campus.",
+			bullets: [
+				"Minimum two versions of the screen",
+				"Use Figma or Sketch (see starter file)",
+				"Only use black and white (no color, no gray)",
+				"Only use Comic Sans for text"
+			]
+		},
+		resources: [],
+		youtube: "https://youtu.be/s193MB7m3JU",
+		date: "October 10, 2016",
+		slides: "/lecture/Lecture5.pdf"
+	},
 	{
 		title: "Information Architecture",
 		number: 4,
