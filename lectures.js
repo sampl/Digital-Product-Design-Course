@@ -17,7 +17,7 @@ var lectureData = [
 		resources: [],
 		youtube: "https://youtu.be/s193MB7m3JU",
 		date: "October 10, 2016",
-		slides: "/lecture/Lecture5.pdf"
+		slides: "/lectures/Lecture5.pdf"
 	},
 	{
 		title: "Information Architecture",
