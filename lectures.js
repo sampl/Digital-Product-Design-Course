@@ -1,7 +1,24 @@
 
 
 var lectureData = [
-{
+	{
+			title: "Interactive Prototyping",
+			number: 6,
+			description: "Using the wireframes from last class, we start building interactive prototypes to see how the products work on device.",
+			assignment: {
+				discription: "Build an interactive prototype of a phone ap to help students find places to study on campus.",
+				bullets: [
+					"Minimum three screens",
+					"Use Figma or Sketch to make wireframes",
+					"Use Invision to make interactive prototype",
+					"Submit by sending us a public link on Canvas"
+				]
+			},
+			resources: [],
+			youtube: "https://youtu.be/LDz-zmgZp14",
+			date: "October 23, 2016",
+			slides: "/lecture/Lecture6.pdf"
+	},{
 		title: "Wireframing and Sketching",
 		number: 5,
 		description: "Review the basics of wireframing and sketching for quickly modeling and prototyping app layouts and flows.",
@@ -125,9 +142,3 @@ var lectures = new Vue({
 		}
 	}
 });
-
-
-
-
-
-
