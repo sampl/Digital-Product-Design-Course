@@ -17,7 +17,7 @@ var lectureData = [
 			resources: [],
 			youtube: "https://youtu.be/LDz-zmgZp14",
 			date: "October 23, 2016",
-			slides: "/lecture/Lecture6.pdf"
+			slides: "/lectures/Lecture6.pdf"
 	},{
 		title: "Wireframing and Sketching",
 		number: 5,
