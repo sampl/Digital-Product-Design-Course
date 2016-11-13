@@ -2,6 +2,21 @@
 
 var lectureData = [
 	{
+			title: "Evaluate - Did it work?",
+			number: 7,
+			description: "Learn how to successfully conduct usability tests on the product prototype.",
+			assignment: {
+				discription: "Test your interactive prototype by conducting a usability on another person.",
+				bullets: [
+					"Write a list of at least three insights from your test",
+					"BONUS - update your prototype based on your findings"
+				]
+			},
+			resources: [],
+			youtube: "https://youtu.be/3YDoYxgMKJ4",
+			date: "October 31, 2016",
+			slides: "/lectures/Lecture7.pdf"
+	},{
 			title: "Interactive Prototyping",
 			number: 6,
 			description: "Using the wireframes from last class, we start building interactive prototypes to see how the products work on device.",
