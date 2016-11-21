@@ -2,6 +2,42 @@
 
 var lectureData = [
 	{
+			title: "Visual II - Color & Type",
+			number: 9,
+			description: "Dive into how we can make our designs more delightful using color, patterns, branding, and typography.",
+			assignment: {
+				discription: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
+				bullets: [
+					"Use high fidelity screens from the previous wireframe assignment",
+					"Or create new screens from scratch",
+					"Add color, pick custom font and font weights"
+				]
+			},
+			resources: [
+				{
+					title: "Google Fonts",
+					link: "fonts.google.com"
+				}
+			],
+			youtube: "https://youtu.be/bncPY2GJwNI",
+			date: "Novemeber 14, 2016",
+			slides: "/lectures/Lecture9.pdf"
+	},{
+			title: "Visual I - Layout & Hierarchy",
+			number: 8,
+			description: "Overview of whats defines a successful layout. We cover hierarchy, size, composititn, proximity, grids and more.",
+			assignment: {
+				discription: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
+				bullets: [
+					"Use low fidelity screens from the previous wireframe assignment",
+					"Or create new screens from scratch"
+				]
+			},
+			resources: [],
+			youtube: "https://youtu.be/JNxE-cU2pqw",
+			date: "Novemeber 7, 2016",
+			slides: "/lectures/Lecture8.pdf"
+	},{
 			title: "Evaluate - Did it work?",
 			number: 7,
 			description: "Learn how to successfully conduct usability tests on the product prototype.",
