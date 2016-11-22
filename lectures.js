@@ -2,6 +2,35 @@
 
 var lectureData = [
 	{
+			title: "Visual III - Copy, Illustration, Animation, & More",
+			number: 10,
+			description: "Study the principals of delightful design. We also learn how to better communicate to our users through copy, illustration, and animation.",
+			assignment: {
+				discription: "OPTIONAL: Find a design that you like on the internet and try to recreate it as accurately as possible in Sketch or Figma (really try to nail those details!).",
+				bullets: [
+					"Choose an app, website, Dribbble shot, or illustration that you like",
+					"Submit 1) a screenshot of the original piece, and 2) an exported copy of your version as PDF in Canvas",
+					"NOT REQUIRED--this is an extra assignment for those who want to catch up on homework. If you’re caught up, it won’t improve your grade."
+				]
+			},
+			resources: [
+				{
+					title: "Dribbble",
+					link: "dribbble.com"
+				},
+				{
+					title: "Typewolf",
+					link: "typewolf.com"
+				},
+				{
+					title: "Fonts in Use",
+					link: "fontsinuse.com"
+				}
+			],
+			youtube: "https://youtu.be/WP9GsyW-BcQ",
+			date: "Novemeber 21, 2016",
+			slides: "/lectures/Lecture10.pdf"
+	},{
 			title: "Visual II - Color & Type",
 			number: 9,
 			description: "Dive into how we can make our designs more delightful using color, patterns, branding, and typography.",
