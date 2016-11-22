@@ -6,7 +6,7 @@ var lectureData = [
 			number: 10,
 			description: "Study the principals of delightful design. We also learn how to better communicate to our users through copy, illustration, and animation.",
 			assignment: {
-				discription: "OPTIONAL: Find a design that you like on the internet and try to recreate it as accurately as possible in Sketch or Figma (really try to nail those details!).",
+				description: "OPTIONAL: Find a design that you like on the internet and try to recreate it as accurately as possible in Sketch or Figma (really try to nail those details!).",
 				bullets: [
 					"Choose an app, website, Dribbble shot, or illustration that you like",
 					"Submit 1) a screenshot of the original piece, and 2) an exported copy of your version as PDF in Canvas",
@@ -35,7 +35,7 @@ var lectureData = [
 			number: 9,
 			description: "Dive into how we can make our designs more delightful using color, patterns, branding, and typography.",
 			assignment: {
-				discription: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
+				description: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
 				bullets: [
 					"Use high fidelity screens from the previous wireframe assignment",
 					"Or create new screens from scratch",
@@ -56,7 +56,7 @@ var lectureData = [
 			number: 8,
 			description: "Overview of whats defines a successful layout. We cover hierarchy, size, composititn, proximity, grids and more.",
 			assignment: {
-				discription: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
+				description: "Improve the layout using the principles outlined in this lecture (alignment, size, proximity, font-size, font-weight, etc)",
 				bullets: [
 					"Use low fidelity screens from the previous wireframe assignment",
 					"Or create new screens from scratch"
@@ -71,7 +71,7 @@ var lectureData = [
 			number: 7,
 			description: "Learn how to successfully conduct usability tests on the product prototype.",
 			assignment: {
-				discription: "Test your interactive prototype by conducting a usability on another person.",
+				description: "Test your interactive prototype by conducting a usability on another person.",
 				bullets: [
 					"Write a list of at least three insights from your test",
 					"BONUS - update your prototype based on your findings"
@@ -86,7 +86,7 @@ var lectureData = [
 			number: 6,
 			description: "Using the wireframes from last class, we start building interactive prototypes to see how the products work on device.",
 			assignment: {
-				discription: "Build an interactive prototype of a phone ap to help students find places to study on campus.",
+				description: "Build an interactive prototype of a phone ap to help students find places to study on campus.",
 				bullets: [
 					"Minimum three screens",
 					"Use Figma or Sketch to make wireframes",
@@ -103,7 +103,7 @@ var lectureData = [
 		number: 5,
 		description: "Review the basics of wireframing and sketching for quickly modeling and prototyping app layouts and flows.",
 		assignment: {
-			discription: "Start designing a phone app to help students find places to study on campus.",
+			description: "Start designing a phone app to help students find places to study on campus.",
 			bullets: [
 				"Minimum two versions of the screen",
 				"Use Figma or Sketch (see starter file)",
