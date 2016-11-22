@@ -2,7 +2,7 @@
 
 var lectureData = [
 	{
-			title: "Visual III - Copy, Illustration, Animation, & More",
+			title: "Visual III - Copy, Illustration, Animation",
 			number: 10,
 			description: "Study the principals of delightful design. We also learn how to better communicate to our users through copy, illustration, and animation.",
 			assignment: {
