@@ -147,7 +147,7 @@
 							<div v-if="lecture.resources.length">
 								<h2>Resources</h2>
 								<ul>
-									<li v-for="source in lecture.resources"><a href="{{source.link}}">{{source.title}}</a></li>
+									<li v-for="source in lecture.resources"><a v-bind:href="source.link">{{source.title}}</a></li>
 								</ul>
 							</div>
 						</div>
