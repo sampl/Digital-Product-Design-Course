@@ -16,15 +16,15 @@ var lectureData = [
 			resources: [
 				{
 					title: "Dribbble",
-					link: "dribbble.com"
+					link: "https://dribbble.com"
 				},
 				{
 					title: "Typewolf",
-					link: "typewolf.com"
+					link: "https://typewolf.com"
 				},
 				{
 					title: "Fonts in Use",
-					link: "fontsinuse.com"
+					link: "https://fontsinuse.com"
 				}
 			],
 			youtube: "https://youtu.be/WP9GsyW-BcQ",
@@ -45,7 +45,7 @@ var lectureData = [
 			resources: [
 				{
 					title: "Google Fonts",
-					link: "fonts.google.com"
+					link: "https://fonts.google.com"
 				}
 			],
 			youtube: "https://youtu.be/bncPY2GJwNI",
