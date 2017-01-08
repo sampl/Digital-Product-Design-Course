@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<title>Digital Product Design</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<meta name="robots" content="noindex, nofollow" />
+
+	<!-- Favicon -->
+  	<link rel="icon" 
+      type="image/png" 
+      href="imgs/favicon.png" />
+
+    <!-- Share Image -->
+    <meta property="og:image" content="imgs/share.png" />
+    <meta name="twitter:card" content="photo" />
+	<meta name="twitter:site" content="@umichDesign" />
+	<meta name="twitter:title" content="Digital Product Design" />
+	<meta name="twitter:image" content="imgs/share.png" />
+	<meta name="twitter:url" content="http://umichdesign.com/" />
+	
+	<!-- emoji support -->
+	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-88027534-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+
+<body>
+	<header class="text-center hide-mobile text-white">
+		<div class="container">
+			<div class="inline-block">
+				<div class="u-of-m"><img src="imgs/u-of-m.png"></div>
+			</div>
+		</div>
+
+		<div class="content">
+			<h5>ENTR 390.012  &#8226;  FALL 2016</h5>
+			<h1 class="text-white">Digital Product Design</h1>
+			<h3 class="text-white">Mondays, 4-5pm <br /> 170 Weiser Hall</h3>
+		</div>
+	</header>
+
+	<nav class="nav">
+		<div class="container">
+			<div class="float-left">
+				<img src="imgs/UMPDlogo.png" height="30" style="margin-top: 20px;">
+			</div>
+
+			<div class="float-right">
+				<img style="padding-top: 24px; margin-right: 6px;" data-action="show-mobile-nav" class="show-mobile" width="30px" src="imgs/hamburger.png">
+				<img style="padding-top: 24px; margin-right: 6px; display: none" data-action="close-mobile-nav" width="21px" src="imgs/close-menu.png">
+
+				<ul class="nav-list hide-mobile">
+					<li class="active"><a href="/">Lectures</a></li>
+					<li><a href="/about.html">About</a></li>
+					<!-- <li><a href="/resources.html">Resources</a></li> -->
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<ul class="nav-mobile" style="display: none;">
+			<li><a href="/">Lectures</a></li>
+			<li><a href="/about.html">About</a></li>
+			<!-- <li><a href="/resources.html">Resources</a></li> -->
+			<li><a href="/contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<section class="main">
+		<div class="container">
+			<div class="show-mobile">
+				<div class="content">
+					<span class="small-meta-blue"><strong>ENTR 390.012  &#8226;  FALL 2016</strong></span>
+					<h1>Digital Product Design</h1>
+					<h3 style="margin: 0 0 30px 0; padding-bottom: 30px; border-bottom: 1px solid #529FFD;">Mondays, 4-5pm <br /> 170 Weiser Hall</h3>
+				</div>
+				<!-- <hr /> -->
+			</div>
+
+			<h2>Lectures</h2>
+			
+			<div id="lectures" v-cloak>
+				<!-- Vue loop -->
+				<div v-for="lecture in lectures" class="block">
+					<div class="upper" v-on:click="showLecture(lecture.number)">
+						<p class="number">LECTURE {{ lecture.number }}</p>
+						<h3 class="title" v-on:click="showLecture(lecture.number)">{{ lecture.title }}</h3>
+						<p class="date">{{ lecture.date }}</p>
+						<p class="description">{{ lecture.description }}</p>
+					</div>
+					<div class="lower">
+						<a class="watch" v-bind:href="lecture.youtube" target="_blank">Watch Lecture</a>
+						<a class="slides" v-bind:href="lecture.slides" target="_blank">Download Slides</a>
+					</div>
+				</div>
+				<!-- end loop -->
+			</div>
+			
+	</section>
+
+	<footer style="float: left; margin-top: 40px; margin-bottom: 40px; width: 100%">
+		<p class="text-center"><strong>Made with <img class="emoji" draggable="false" alt="❤️" src="http://twemoji.maxcdn.com/16x16/2764.png"> in Ann Arbor, MI</strong></p>
+	</footer>
+
+	<div id="overlay" v-cloak>
+		<transition name="slide">
+			<div class="overlay" v-if="show">
+				<div class="nav">
+					<div class="container narrow">
+						<div class="float-left">
+							<img src="imgs/UMPDlogo.png" height="30" style="margin-top: 20px;">
+						</div>
+						<div class="float-right" style="cursor: pointer" v-on:click="close">
+							<p class="close inline-block" style="margin-right: 8px">Close</p>
+							<img src="imgs/x.svg" style="position: relative; top: 1px;" height="12px">
+						</div>
+					</div>
+				</div>
+
+				<transition name="fade">
+					<section class="main" v-if="show">
+						<div class="container narrow">
+							<h1 class="title">{{ lecture.title }}</h1>
+							<p class="sub-title">Lecture {{lecture.number}}<span class="grey"> - {{lecture.date}}</span></p>
+							<p class="description">{{lecture.description}}</p>
+
+							<div class="inline-block">
+								<a v-bind:href="lecture.youtube" target="_blank"><button class="light-blue" style="margin-right: 24px;">Watch Lecture</button></a>
+								<a v-bind:href="lecture.slides" target="_blank"><button class="white">Download Slides</button></a>
+							</div>
+
+							<div v-if="lecture.assignment">
+								<h2>Assignment</h2>
+								<p>{{ lecture.assignment.description }}</p>
+								<ul>
+									<li v-for="bullet in lecture.assignment.bullets">{{bullet}}</li>
+								</ul>
+							</div>
+
+							<div v-if="lecture.resources.length">
+								<h2>Resources</h2>
+								<ul>
+									<li v-for="source in lecture.resources"><a target="_blank" v-bind:href="source.link">{{source.title}}</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</transition>
+			</div>
+		</transition>
+	</div>
+	<script type="text/javascript" src="lectures.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(document).on('click', '[data-action="show-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="close-mobile-nav"]').show();
+				$('.nav-mobile').slideDown('fast');
+			});
+
+			$(document).on('click', '[data-action="close-mobile-nav"]', function (e) {
+				$(e.target).hide();
+				$('[data-action="show-mobile-nav"]').show();
+				$('.nav-mobile').slideUp('fast');
+			});
+			
+		});
+	</script>
+</body>
+
+</html>
