@@ -7,7 +7,6 @@ html, body {
 body {
   display: flex;
   flex-flow: column;
-  max-height: 100%;
 }
 
 * {
@@ -44,7 +43,6 @@ nav {
   flex: 1;
   order: 2;
   padding: 40px;
-  overflow-y: scroll;
 }
 
 .content-flex {
@@ -100,6 +98,10 @@ ul.vertical li {
 }
 
 @media all and (min-width: 600px) {
+  body {
+    max-height: 100%;
+  }
+
   .container {
     flex-flow: row;
   }
@@ -112,5 +114,6 @@ ul.vertical li {
   .content {
     flex: 4;
     order: 2;
+    overflow-y: scroll;
   }
 }
