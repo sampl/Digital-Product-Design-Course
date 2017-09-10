@@ -50,15 +50,8 @@ body{
   line-height: 1.75;
 }
 
-.underline {
-    margin-bottom: 2px;
-    border-bottom: 4px solid;
-}
-
-.underline:hover {
-  position: relative; 
-  top: -5px;
-  padding-bottom: 5px;
+.emphasis {
+  font-weight: bold;
 }
 
 .subtitle{
@@ -202,7 +195,7 @@ body {
   font-family: "PT Serif", "georgia", serif;
   color: #333333; }
 
-p::selection, 
+p::selection,
 h1::selection,
 h2::selection,
 h3::selection,
@@ -249,7 +242,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 }
 
 p {
-  margin: 0; 
+  margin: 0;
 }
 
 
